@@ -1,58 +1,40 @@
-print("*** ИГРЫ С ЧИСЛАМИ ***")
+##1
+#print("1 Harjutus")
+#print()
+#a=0
+#nimi_list=[] #Создание списка для будущего использования
+#for i in range(5):
+#    nimi=input("Kirjuta nimi ").title()
+#    while nimi.isalpha()==False:
+#        nimi=input("Kirjuta õige nimi ")
+#    nimi_list.append(nimi) #.append() В конец списка добавляется элемент, в данном случае введеная переменная добавляется в конец списка
+#nimi_list.sort() #.sort() Сортировка списка в порядка возрастания
+#print(nimi_list)
+#print("Viimane nimi on ", nimi)
+#print()
+
+##2
+#print("2 Harjutus")
+#print()
+#opilased = ["Juhan","Kati","Maarja","Mario","Mati"]
+#print(opilased)
+#pos=input("Millist positsiooni tahaksid muuta? ")
+#while pos.isdigit()==False or int(pos)>5:
+#    pos=input("Kirjuta õige number! Millist positsiooni tahaksid muuta? ")
+#nimi=input("Kirjuta uus õpilane ")
+#while nimi.isalpha()==False:
+#    nimi=input("Kirjuta õige nimi ")
+#opilased.pop(int(pos)-1) #.pop(n) удаляет n элемент в списке
+#opilased.insert(int(pos)-1,nimi) #.insert(i,n) вставляет в i позицию, элемент n
+#print(opilased)
+#print()
+
+#3
+print("3 Harjutus")
 print()
-#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-while 1:
-    try:
-        a = (abs(int(input("Введите целое число => ")))) #Lisatud paar sulgu, mis puudusid
-        break
-    except ValueError:
-         print("Это не целое число")
-#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-if a==0:
-    print("Нет смысла ничего делать с нулём")
-else:
-#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    print("Определяем, сколько в числе чётных и сколько нечётных цифр")
-    print()
-    c=b=a
-    paaris=0
-    paaritu=0
-    #eemaldas topelt võrdse ja jättis tavapärase võrdusseisu
-    while b > 0: #kooloni asemel semikoolon
-            if b % 2 == 0: #asendas võrrandi kontrolliga, kas osad on võrdsed
-                    paaris += 1
-            else:
-                    paaritu += 1
-                    #ümber korraldatud pluss
-            b = b // 10 #b on lisaruumi
-  
-    print("Чётных цифр:",paaris)
-    print("Нечётных цифр:",paaritu)
-    #teksti järel ei olnud koma, nii et trükis oli muutuja
-    print()
-#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    print("*Переворачиваем* введённое число")
-    print()
-    b=0
-    while a > 0: #puudu semikoolon
-        number = a % 10
-        a = a // 10
-        b = b * 10
-        b +=number #b-l on lisaruum ja pluss on ümber paigutatud
-    print("*Перевёрнутое* число", b)
-    print()
-#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    print("Проверяем гипотезу Сиракуз") #lisasulgud
-    print()
-    if c % 2 == 0: #selle asemel, et kontrollida, kas mõlemad osad on võrdsed, oli võrrand
-        print("с - чётное число. Делим на 2.")
-    else:
-        print("с - нечётное число. Умножаем на 3, прибавляем 1 и делим на 2.")
-    while c != 1:
-            if c % 2 == 0: #selle asemel, et kontrollida, kas mõlemad osad on võrdsed, oli võrrand
-                    c = c / 2 #eemaldati võrdsuse kontroll ja määrati võrdsus
-            else:
-                    c = (3*c + 1) / 2 #eemaldati võrdsuse kontroll ja määrati võrdsus
-            print(round(c), end=" ") #teine ​​tsitaat jäeti välja
-    print()
-    print("Гипотеза верна") #erinevad tsitaadid
+opilased = ["Juhan","Kati","Mario","Mario","Mati","Mati"]
+for i in range(10):
+    for n in range(0,len(opilased)-1):
+        if len(opilased)-1!=n and opilased[len(opilased)-1]==opilased[n]:
+            opilased.pop(n)
+print(opilased)
